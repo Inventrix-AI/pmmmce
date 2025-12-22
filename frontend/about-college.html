@@ -2,17 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Our College | Pt. Madan Mohan Malaviya College of Education</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our College | PMMMCE</title>
     <style>
-        /* Inner Page Styles (Same as template) */
+        /* Subpage Layout Styles */
         .breadcrumb-area {
             background-color: #f4f4f4;
             padding: 15px 0;
@@ -60,6 +54,7 @@
 
         .sidebar-menu {
             list-style: none;
+            padding: 0;
         }
 
         .sidebar-menu li {
@@ -98,6 +93,7 @@
             font-size: 1.8rem;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
+            font-family: var(--font-heading);
         }
 
         .page-content p {
@@ -110,71 +106,16 @@
             .inner-page-container {
                 grid-template-columns: 1fr;
             }
-
-            .sidebar {
-                margin-bottom: 20px;
-            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Top Bar & Header (Same as index) -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="contact-info"><span><i class="icon">📞</i> 9285354702</span><span><i class="icon">✉️</i>
-                        pmmmce@gmail.com</span></div>
-                <div class="social-links"><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">Login</a></div>
-            </div>
-        </div>
-    </div>
-    <header class="main-header">
-        <div class="container header-container">
-            <div class="logo-section">
-                <div class="logo-placeholder"><img src="https://placehold.co/80x80?text=Logo" alt="College Logo"></div>
-                <div class="college-name">
-                    <h1>Pt. Madan Mohan Malaviya College of Education</h1>
-                    <p>Lawar (Darrighat), Post Koni, Teh & Block Masturi, Dist : Bilapsur ( C.G)</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="container">
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-samiti.html">About Our Samiti</a></li>
-                <li><a href="about-college.html" class="active">About Our College</a></li>
-                <li><a href="governing-body.html">Governing Body</a></li>
-                <li><a href="courses.html">Courses & Fees</a></li>
-                <li class="dropdown"><a href="#">Facility ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="library.html">Library</a></li>
-                        <li><a href="laboratory.html">Laboratory</a></li>
-                        <li><a href="activity.html">Activity</a></li>
-                        <li><a href="infrastructure.html">Infrastructure</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="#">Students ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="important-links.html">Important Links</a></li>
-                        <li><a href="online-attendance.html">Online Attendance</a></li>
-                    </ul>
-                </li>
-                <li><a href="staff-profile.html">Staff Profile</a></li>
-                <li><a href="audit-reports.html">Audit Reports</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </nav>
+    <div id="header-root"></div>
 
     <div class="breadcrumb-area">
         <div class="container">
-            <div class="breadcrumb-text"><a href="index.html">Home</a> <span>/</span> About Our College</div>
+            <div class="breadcrumb-text"><a href="/">Home</a> <span>/</span> About Our College</div>
         </div>
     </div>
 
@@ -203,40 +144,8 @@
         </main>
     </div>
 
-    <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p><strong>Pt Madan Mohan Malviya College of Education</strong></p>
-                <p>Lawar (Darrighat), Post Koni, Teh & Block Masturi, Dist : Bilapsur ( C.G), Pin 495551</p>
-                <p><strong>Office Contact:</strong> 9285354702</p>
-                <p><strong>Principal Contact:</strong> 9406299803</p>
-                <p><strong>Email:</strong> pmmmce@gmail.com</p>
-            </div>
-            <div class="footer-col">
-                <h4>Regulatory Bodies</h4>
-                <ul>
-                    <li><a href="#">NCTE Address & Contacts</a></li>
-                    <li><a href="#">WRC Address & Contacts</a></li>
-                    <li><a href="#">SCERT Raipur</a></li>
-                    <li><a href="#">Bilaspur University</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-college.html">About College</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Pt. Madan Mohan Malaviya College of Education. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <script src="main.js"></script>
+    <div id="footer-root"></div>
+    <script type="module" src="/src/js/main.js"></script>
 </body>
 
 </html>

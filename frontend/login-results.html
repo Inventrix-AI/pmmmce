@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Results | PMMMCE</title>
+</head>
+
+<body>
+    <div id="header-root"></div>
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-text"><a href="/">Home</a> <span>/</span> Login & Results</div>
+        </div>
+    </div>
+    <div class="container inner-page-container">
+        <aside class="sidebar">
+            <h3>Quick Actions</h3>
+            <ul class="sidebar-menu">
+                <li><a href="login-results.html" class="active">Student/College Login</a></li>
+                <li><a href="exam-form.html">Examination Form</a></li>
+                <li><a href="online-services.html">Online Services</a></li>
+            </ul>
+        </aside>
+        <main class="page-content">
+            <h2>Student & College Login</h2>
+            <div
+                style="background: #f9f9f9; padding: 30px; border-radius: 8px; max-width: 500px; margin: 0 auto; border: 1px solid #eee;">
+                <h3 style="text-align: center; margin-bottom: 20px;">Sign In to Portal</h3>
+                <form onsubmit="event.preventDefault(); alert('This is a demo login form.');">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 500;">User ID / Roll
+                            Number</label>
+                        <input type="text"
+                            style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"
+                            placeholder="Enter ID">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 500;">Password</label>
+                        <input type="password"
+                            style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"
+                            placeholder="Enter Password">
+                    </div>
+                    <button type="submit"
+                        style="width: 100%; padding: 12px; background: var(--primary-color); color: white; border: none; border-radius: 4px; font-weight: 700; cursor: pointer;">Login</button>
+                    <div style="margin-top: 15px; text-align: center; font-size: 0.9rem;">
+                        <a href="#" style="color: var(--secondary-color);">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+
+            <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Check Results</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li
+                    style="margin-bottom: 10px; padding: 10px; background: #f4f4f4; border-left: 4px solid var(--secondary-color);">
+                    <a href="#" style="display: block; color: var(--text-color); font-weight: 600;">B.Ed 4th Semester
+                        Result 2024 <span style="float: right; color: red; font-size: 0.8rem;">NEW</span></a>
+                </li>
+                <li
+                    style="margin-bottom: 10px; padding: 10px; background: #f4f4f4; border-left: 4px solid var(--secondary-color);">
+                    <a href="#" style="display: block; color: var(--text-color); font-weight: 600;">D.El.Ed 2nd Year
+                        Main Exam Result <span style="float: right; color: red; font-size: 0.8rem;">NEW</span></a>
+                </li>
+            </ul>
+        </main>
+    </div>
+    <div id="footer-root"></div>
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

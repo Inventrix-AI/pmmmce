@@ -4,114 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | PMMMCE</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <title>Photo Gallery | PMMMCE</title>
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 20px 15px 10px;
+            font-size: 0.9rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
+    <div id="header-root"></div>
+
+    <div class="breadcrumb-area">
         <div class="container">
-            <div class="top-bar-content">
-                <div class="contact-info">
-                    <span><i class="icon">📞</i> +91-9451160718</span>
-                    <span><i class="icon">✉️</i> pmmmce2016@gmail.com</span>
-                </div>
-                <div class="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Login</a>
-                </div>
-            </div>
+            <div class="breadcrumb-text"><a href="/">Home</a> <span>/</span> Photo Gallery</div>
         </div>
     </div>
 
-    <!-- Header -->
-    <header class="main-header">
-        <div class="container header-container">
-            <div class="logo-section">
-                <div class="logo-placeholder">
-                    <img src="https://placehold.co/80x80?text=Logo" alt="College Logo">
-                </div>
-                <div class="college-name">
-                    <h1>Pt. Madan Mohan Malaviya College of Education</h1>
-                    <p>Recognized by NCTE & Affiliated to V.B.S. Purvanchal University, Jaunpur</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="container">
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="nep.html">NEP 2020</a></li>
-                <li><a href="administration.html">Administration</a></li>
-                <li><a href="academics.html">Academics</a></li>
-                <li><a href="admission.html">Admission</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
+    <div class="container inner-page-container">
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul class="sidebar-menu">
+                <li><a href="gallery.html" class="active">Photo Gallery</a></li>
+                <li><a href="activity.html">Activities</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </nav>
+        </aside>
+        <main class="page-content">
+            <h2>Photo Gallery</h2>
+            <p>Glimpses of activities, campus life, and events at PMMMCE.</p>
 
-    <!-- Main Content -->
-    <main class="main-content container">
-        <div class="card">
-            <div class="card-header">
-                <h3>PAGE_TITLE</h3>
-            </div>
-            <div class="card-body">
-                <div class="content-text">
-                    <p>Content for PAGE_TITLE will be updated soon.</p>
+            <div class="gallery-grid">
+                <!-- 1. Campus Main -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80"
+                        alt="College Campus">
+                    <div class="caption">College Campus Main Building</div>
+                </div>
+                <!-- 2. Library -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80"
+                        alt="Library">
+                    <div class="caption">Central Library & Reading Room</div>
+                </div>
+                <!-- 3. Classroom/Lecture -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80"
+                        alt="Classroom">
+                    <div class="caption">Interactive Classroom Sessions</div>
+                </div>
+                <!-- 4. Group Study -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80"
+                        alt="Students">
+                    <div class="caption">Student Group Activities</div>
+                </div>
+                <!-- 5. Graduation/Ceremony (Convocation) -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=600&q=80"
+                        alt="Convocation">
+                    <div class="caption">Annual Convocation Ceremony</div>
+                </div>
+                <!-- 6. Sports -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?auto=format&fit=crop&w=600&q=80"
+                        alt="Sports">
+                    <div class="caption">Annual Sports Meet</div>
+                </div>
+                <!-- 7. Lab -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80"
+                        alt="Science Lab">
+                    <div class="caption">Science Laboratory</div>
+                </div>
+                <!-- 8. Cultural Event -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80"
+                        alt="Cultural Event">
+                    <div class="caption">Cultural Programs</div>
+                </div>
+                <!-- 9. Greenery/Garden -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80"
+                        alt="College Garden">
+                    <div class="caption">Green Campus Initiative</div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p>Pt. Madan Mohan Malaviya College of Education</p>
-                <p>29/89 Nariyal Kothi Dayalband, Bilaspur (C.G.)</p>
-                <p>Email: pmmmce2016@gmail.com</p>
-                <p>Phone: +91-9451160718</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="nep.html">NEP 2020</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>External Links</h4>
-                <ul>
-                    <li><a href="#">NCTE</a></li>
-                    <li><a href="#">VBSPU</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2025 Pt. Madan Mohan Malaviya College of Education. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script type="module" src="/main.js"></script>
+    <div id="footer-root"></div>
+    <script type="module" src="/src/js/main.js"></script>
 </body>
 
 </html>

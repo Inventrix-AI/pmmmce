@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty & Staff | PMMMCE</title>
+    <style>
+        /* Subpage Layout Styles */
+        .breadcrumb-area {
+            background-color: #f4f4f4;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumb-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumb-text a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb-text span {
+            margin: 0 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .faculty-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.2s;
+            border: 1px solid #eee;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faculty-img {
+            width: 100%;
+            height: 280px;
+            background-color: #eee;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .faculty-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .faculty-name {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .faculty-desig {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .faculty-dept {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .loading-text {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-root"></div>
+
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-text"><a href="/">Home</a> <span>/</span> Teaching Staff</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2
+            style="color: var(--primary-color); margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px;">
+            Our Teaching Staff</h2>
+
+        <div id="faculty-grid" class="faculty-grid">
+            <div class="loading-text">Loading Faculty Members...</div>
+        </div>
+    </div>
+
+    <div id="footer-root"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module">
+        import { API } from './src/js/api.js';
+
+        async function loadFaculty() {
+            try {
+                const faculty = await API.get('/faculty');
+                const grid = document.getElementById('faculty-grid');
+
+                if (!faculty || faculty.length === 0) {
+                    grid.innerHTML = '<div class="loading-text">No faculty members found.</div>';
+                    return;
+                }
+
+                grid.innerHTML = faculty.map(member => `
+                    <div class="faculty-card">
+                        <img src="${member.image_url || '/images/default-avatar.png'}" alt="${member.name}" class="faculty-img" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image'">
+                        <div class="faculty-info">
+                            <div class="faculty-name">${member.name}</div>
+                            <div class="faculty-desig">${member.designation}</div>
+                            <div class="faculty-dept">${member.department || 'Education Department'}</div>
+                        </div>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('Failed to load faculty:', error);
+                document.getElementById('faculty-grid').innerHTML = '<div class="loading-text">Failed to load data. Please try again later.</div>';
+            }
+        }
+
+        // Delay slightly to ensure styles load
+        setTimeout(loadFaculty, 100);
+    </script>
+</body>
+
+</html>

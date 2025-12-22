@@ -1,0 +1,29 @@
+const API_BASE_URL = 'http://localhost:3000/api';
+
+export const API = {
+    async get(endpoint) {
+        try {
+            const response = await fetch(`${API_BASE_URL}${endpoint}`);
+            if (!response.ok) throw new Error(`API Error: ${response.statusText}`);
+            return await response.json();
+        } catch (error) {
+            console.error('Fetch Error:', error);
+            return null;
+        }
+    },
+
+    async post(endpoint, data) {
+        try {
+            const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            if (!response.ok) throw new Error(`API Error: ${response.statusText}`);
+            return await response.json();
+        } catch (error) {
+            console.error('Fetch Error:', error);
+            return null;
+        }
+    }
+};

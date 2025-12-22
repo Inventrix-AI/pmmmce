@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratory | Pt. Madan Mohan Malaviya College of Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inner Page Styles (Same as template) */
+        .breadcrumb-area {
+            background-color: #f4f4f4;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumb-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumb-text a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb-text span {
+            margin: 0 5px;
+        }
+
+        .inner-page-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .sidebar {
+            background-color: var(--white);
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            border-top: 3px solid var(--secondary-color);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .sidebar-menu li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            padding: 10px 5px;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            color: var(--secondary-color);
+            padding-left: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .page-content {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .page-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .page-content p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .inner-page-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar & Header (Same as index) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info"><span><i class="icon">📞</i> 9285354702</span><span><i class="icon">✉️</i>
+                        pmmmce@gmail.com</span></div>
+                <div class="social-links"><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">Login</a></div>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-section">
+                <div class="logo-placeholder"><img src="https://placehold.co/80x80?text=Logo" alt="College Logo"></div>
+                <div class="college-name">
+                    <h1>Pt. Madan Mohan Malaviya College of Education</h1>
+                    <p>Lawar (Darrighat), Post Koni, Teh & Block Masturi, Dist : Bilapsur ( C.G)</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-samiti.html">About Our Samiti</a></li>
+                <li><a href="about-college.html">About Our College</a></li>
+                <li><a href="governing-body.html">Governing Body</a></li>
+                <li><a href="courses.html">Courses & Fees</a></li>
+                <li class="dropdown"><a href="#">Facility ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="laboratory.html" class="active">Laboratory</a></li>
+                        <li><a href="activity.html">Activity</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Students ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="important-links.html">Important Links</a></li>
+                        <li><a href="online-attendance.html">Online Attendance</a></li>
+                    </ul>
+                </li>
+                <li><a href="staff-profile.html">Staff Profile</a></li>
+                <li><a href="audit-reports.html">Audit Reports</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-text"><a href="index.html">Home</a> <span>/</span> Laboratory</div>
+        </div>
+    </div>
+
+    <div class="container inner-page-container">
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul class="sidebar-menu">
+                <li><a href="about-samiti.html">About Our Samiti</a></li>
+                <li><a href="about-college.html">About Our College</a></li>
+                <li><a href="courses.html">Courses & Fees</a></li>
+                <li><a href="staff-profile.html">Staff Profile</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </aside>
+        <main class="page-content">
+            <h2>Laboratories</h2>
+            <p>We believe in learning by doing. Our college has well-equipped laboratories to provide practical
+                experience to our students.</p>
+            <ul>
+                <li><strong>Science Lab:</strong> Equipped with all necessary apparatus for physics, chemistry, and
+                    biology experiments.</li>
+                <li><strong>Psychology Lab:</strong> Contains various psychological tests and equipment for practical
+                    learning.</li>
+                <li><strong>Educational Technology (ET) Lab:</strong> Equipped with modern audio-visual aids.</li>
+                <li><strong>Computer Lab:</strong> Modern computers with internet connectivity for digital literacy.
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><strong>Pt Madan Mohan Malviya College of Education</strong></p>
+                <p>Lawar (Darrighat), Post Koni, Teh & Block Masturi, Dist : Bilapsur ( C.G), Pin 495551</p>
+                <p><strong>Office Contact:</strong> 9285354702</p>
+                <p><strong>Principal Contact:</strong> 9406299803</p>
+                <p><strong>Email:</strong> pmmmce@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Regulatory Bodies</h4>
+                <ul>
+                    <li><a href="#">NCTE Address & Contacts</a></li>
+                    <li><a href="#">WRC Address & Contacts</a></li>
+                    <li><a href="#">SCERT Raipur</a></li>
+                    <li><a href="#">Bilaspur University</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-college.html">About College</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pt. Madan Mohan Malaviya College of Education. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

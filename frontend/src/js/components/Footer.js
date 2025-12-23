@@ -1,7 +1,7 @@
 export const Footer = () => `
-<footer class="main-footer" style="background: var(--primary-color); color: white; padding-top: 50px;">
+<footer class="main-footer">
     <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding-bottom: 40px;">
+        <div class="footer-grid">
             <!-- Col 1 -->
             <div class="footer-col">
                 <h4 style="border-bottom: 2px solid var(--secondary-color); display: inline-block; margin-bottom: 20px; padding-bottom: 5px;">Contact Us</h4>

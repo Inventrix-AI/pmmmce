@@ -1,9 +1,9 @@
 export const HeroSection = () => `
-<section class="hero-wrapper" style="padding: 20px 0;">
-    <div class="container hero-grid-3-col" style="display: grid; grid-template-columns: 280px 1fr 280px; gap: 20px;">
+<section class="hero-wrapper">
+    <div class="container hero-grid-3-col">
         
         <!-- Left: Quick Links -->
-        <aside class="quick-links-sidebar" style="background: white; border-radius: 4px; box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column;">
+        <aside class="quick-links-sidebar">
             <a href="login-results.html" class="quick-link-item">
                 <img src="https://img.icons8.com/color/48/000000/graduation-cap.png" class="quick-link-icon" style="width:24px; height:24px;" alt="Login">
                 New College Login/Results
@@ -39,7 +39,7 @@ export const HeroSection = () => `
         </aside>
 
         <!-- Center: Slider -->
-        <div class="hero-slider-center" style="height: 450px; position: relative; border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-sm);">
+        <div class="hero-slider-center">
             <div class="slide active" style="position: absolute; width: 100%; height: 100%; background-image: url('https://pmmmce.com/wp-content/uploads/2025/08/slider14.png'); background-size: cover; background-position: center; display:flex; align-items:center; justify-content:center;">
                 <div style="background: rgba(0,0,0,0.5); padding: 20px; color: white; text-align: center;">
                     <h2>Welcome to PMMMCE</h2>
@@ -49,7 +49,7 @@ export const HeroSection = () => `
         </div>
 
         <!-- Right: VIP Cards -->
-        <aside class="vip-cards-sidebar" style="display: flex; flex-direction: column; gap: 15px;">
+        <aside class="vip-cards-sidebar">
             <!-- VIP 1 -->
             <div class="vip-card">
                 <div class="vip-img-wrapper">

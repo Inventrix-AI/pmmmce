@@ -1,8 +1,8 @@
 import { API } from '../api.js';
 
 export const NewsCards = () => `
-<section class="news-cards-section" style="padding: 40px 0; background: #f9f9f9;">
-    <div class="container news-cards-wrapper" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+<section class="news-cards-section">
+    <div class="container news-cards-wrapper">
         
         <!-- Card 1: Campus News -->
         <div class="news-card blue-card" style="background: white; border-radius: 8px; box-shadow: var(--shadow-sm); overflow: hidden; border-top: 4px solid #0056b3;">

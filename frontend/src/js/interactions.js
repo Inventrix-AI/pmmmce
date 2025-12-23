@@ -4,6 +4,17 @@
  */
 
 export function initInteractions() {
+    // 0. Mobile Menu Toggle
+    const menuBtn = document.querySelector('.mobile-menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    if (menuBtn && navList) {
+        menuBtn.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            menuBtn.textContent = navList.classList.contains('active') ? '✕' : '☰';
+        });
+    }
+
     // 1. Dropdown Logic (Desktop Hover + Mobile Click)
     const dropdowns = document.querySelectorAll('.dropdown');
 

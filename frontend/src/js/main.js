@@ -2,6 +2,7 @@ import '../css/variables.css';
 import '../css/global.css';
 import '../css/home.css';
 import '../css/subpage.css';
+import '../css/responsive.css';
 
 import { ComponentLoader } from './utils/ComponentLoader.js';
 import { Header } from './components/Header.js';

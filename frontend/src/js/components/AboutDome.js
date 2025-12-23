@@ -1,6 +1,6 @@
 export const AboutDome = () => `
-<section class="about-dome-section" style="padding: 60px 0; background: white;">
-    <div class="container" style="display: flex; align-items: center; gap: 50px;">
+<section class="about-dome-section">
+    <div class="container about-dome-grid">
         
         <!-- Content -->
         <div class="dome-content" style="flex: 1;">
@@ -22,7 +22,7 @@ export const AboutDome = () => `
         </div>
 
         <!-- Image (Dome) -->
-        <div class="dome-image-wrapper" style="flex: 1; position: relative;">
+        <div class="dome-image-wrapper">
             <img src="https://pmmmce.com/wp-content/uploads/2025/08/slider13.jpg" alt="College Dome" class="dome-img" 
                  style="width: 100%; border-radius: 200px 200px 20px 20px; box-shadow: var(--shadow-md); border: 5px solid white;">
             

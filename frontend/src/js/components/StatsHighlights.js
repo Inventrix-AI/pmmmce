@@ -1,10 +1,10 @@
 export const StatsHighlights = () => `
-<section class="stats-highlights-wrapper" style="background: #eef; padding: 40px 0;">
-    <div class="container stats-highlights-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;">
+<section class="stats-highlights-wrapper">
+    <div class="container stats-highlights-grid">
         
         <!-- Left: Stats Grid (Dark Overlay style) -->
-        <div class="stats-content" style="background: linear-gradient(rgba(40, 15, 60, 0.9), rgba(40, 15, 60, 0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 30px; border-radius: 8px; color: white;">
-            <div class="stats-grid-8-col" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div class="stats-content">
+            <div class="stats-grid-8-col">
                 <!-- Row 1 -->
                 <div class="stat-item">
                     <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">🎓</div>
@@ -67,8 +67,8 @@ export const StatsHighlights = () => `
         </div>
 
         <!-- Right: Highlights Panel (White Curve) -->
-        <div class="highlights-panel" style="background: white; border-radius: 8px; box-shadow: var(--shadow-sm); padding: 20px; border-top: 5px solid var(--secondary-color);">
-            <h3 class="highlights-title" style="color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; font-weight: 700;">HIGHLIGHTS</h3>
+        <div class="highlights-panel">
+            <h3 class="highlights-title">HIGHLIGHTS</h3>
             <ul class="highlights-list" style="list-style: none; padding: 0;">
                  <li style="margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 10px;">
                     <a href="#" style="font-weight: 600; color: #333; display: block; margin-bottom: 5px;">PhD Admission Notifiction 2025</a>

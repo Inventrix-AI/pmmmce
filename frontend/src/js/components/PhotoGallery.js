@@ -1,10 +1,10 @@
 export const PhotoGallery = () => `
-<section class="gallery-strip" style="padding: 40px 0;">
+<section class="gallery-strip">
     <div class="container">
-        <h2 style="text-align: center; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; font-family: var(--font-heading);">
+        <h2 class="gallery-title">
             Photo Gallery
         </h2>
-        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+        <div class="gallery-grid">
             <div class="gallery-item" style="height: 180px; overflow: hidden; border-radius: 4px;">
                 <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Student Group" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
             </div>

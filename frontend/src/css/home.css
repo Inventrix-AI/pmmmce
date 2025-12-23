@@ -1,4 +1,36 @@
 /* Hero Section Styles */
+.hero-wrapper {
+    padding: 20px 0;
+}
+
+.hero-grid-3-col {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 20px;
+}
+
+.quick-links-sidebar {
+    background: white;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-slider-center {
+    height: 450px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.vip-cards-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
 /* Quick Links Styles (Blue/Grey Text -> Orange Hover) */
 .quick-link-item {
@@ -92,4 +124,95 @@
 .view-profile-btn:hover {
     background: var(--primary-color);
     color: white;
+}
+
+/* Stats Highlights */
+.stats-highlights-wrapper {
+    padding: 40px 0;
+    background: #eef;
+}
+
+.stats-highlights-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.stats-content {
+    background: linear-gradient(rgba(40, 15, 60, 0.9), rgba(40, 15, 60, 0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+}
+
+.stats-grid-8-col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.highlights-panel {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding: 20px;
+    border-top: 5px solid var(--secondary-color);
+}
+
+.highlights-title {
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* News Cards */
+.news-cards-section {
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+.news-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Photo Gallery */
+.gallery-strip {
+    padding: 40px 0;
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* About Dome */
+.about-dome-section {
+    padding: 60px 0;
+    background: white;
+}
+
+.about-dome-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.dome-image-wrapper {
+    flex: 1;
+    position: relative;
 }

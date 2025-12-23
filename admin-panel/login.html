@@ -5,104 +5,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login | PMMMCE</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #4F2075;
+            --primary-dark: #371652;
+            --accent: #D48109;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --bg-gradient: linear-gradient(135deg, #4F2075 0%, #2a0b42 100%);
+        }
+
         body {
             margin: 0;
-            font-family: system-ui, -apple-system, sans-serif;
-            background: #f4f6f8;
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-gradient);
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
+            color: var(--text-main);
         }
 
-        .login-card {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .login-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            display: flex;
+            overflow: hidden;
+            margin: 20px;
+            min-height: 550px;
         }
 
-        .login-header {
-            text-align: center;
+        /* Left Side: Visuals */
+        .login-visual {
+            flex: 1;
+            background: linear-gradient(135deg, rgba(79, 32, 117, 0.9), rgba(42, 11, 66, 0.9)),
+                url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            color: white;
+            position: relative;
+        }
+
+        .visual-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .visual-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Right Side: Form */
+        .login-form-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            background: white;
+        }
+
+        .form-content {
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+        }
+
+        .brand-logo {
             margin-bottom: 30px;
         }
 
-        .login-header h1 {
+        .brand-logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
             margin: 0;
-            color: #4F2075;
-            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .brand-logo span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            display: block;
+            margin-top: 5px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            position: relative;
         }
 
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: #555;
-            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .form-group input {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 14px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
             box-sizing: border-box;
+            background: #f9fafb;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary);
+            background: white;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(79, 32, 117, 0.1);
         }
 
         .btn-primary {
             width: 100%;
-            padding: 12px;
-            background: #4F2075;
+            padding: 14px;
+            background: var(--primary);
             color: white;
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            border-radius: 10px;
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
         }
 
         .btn-primary:hover {
-            background: #3e195e;
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(79, 32, 117, 0.2);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
         }
 
         .error-msg {
-            color: #dc3545;
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
             font-size: 0.9rem;
-            text-align: center;
-            margin-bottom: 15px;
             display: none;
+            border-left: 4px solid #ef4444;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+                max-width: 400px;
+                min-height: auto;
+            }
+
+            .login-visual {
+                display: none;
+            }
+
+            .login-form-wrapper {
+                padding: 40px 30px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="login-card">
-        <div class="login-header">
-            <h1>Admin Panel</h1>
-            <p style="color: #666; margin-top: 5px;">Login to manage website</p>
+    <div class="login-container">
+        <!-- Visual Side -->
+        <div class="login-visual">
+            <div class="visual-content">
+                <h2>Welcome Back</h2>
+                <p>Manage your institution's website efficiently with the PMMMCE Admin Dashboard.</p>
+            </div>
         </div>
 
-        <div id="error-alert" class="error-msg"></div>
+        <!-- Form Side -->
+        <div class="login-form-wrapper">
+            <div class="form-content">
+                <div class="brand-logo">
+                    <h1>Admin Login</h1>
+                    <span>Please sign in to continue</span>
+                </div>
 
-        <form id="login-form">
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" id="email" required placeholder="admin@pmmmce.com">
+                <div id="error-alert" class="error-msg"></div>
+
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="admin@pmmmce.com" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="••••••••"
+                            autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn-primary">Sign In</button>
+
+                    <div class="footer-note">
+                        PMMMCE &copy; 2025
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" id="password" required placeholder="••••••••">
-            </div>
-            <button type="submit" class="btn-primary">Login</button>
-        </form>
+        </div>
     </div>
 
+    <!-- Configuration -->
     <script src="js/config.js"></script>
     <script src="js/auth.js"></script>
 </body>

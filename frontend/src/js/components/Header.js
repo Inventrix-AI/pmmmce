@@ -6,7 +6,7 @@ export const Header = () => `
             <span>📞 9285354702</span> | <span>✉️ pmmmce@gmail.com</span>
         </div>
         <div class="login-links">
-            <a href="#">B.Ed/D.El.Ed Login</a> | <a href="#">RTI</a>
+            <a href="/login.html" class="btn btn-login">Login Portal</a>
         </div>
     </div>
 </div>
@@ -59,6 +59,7 @@ export const Header = () => `
             </li>
 
             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="/login.html" class="nav-link">Login</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
     </div>

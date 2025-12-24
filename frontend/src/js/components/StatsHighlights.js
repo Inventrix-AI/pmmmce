@@ -3,66 +3,39 @@ export const StatsHighlights = () => `
     <div class="container stats-highlights-grid">
         
         <!-- Left: Stats Grid (Dark Overlay style) -->
-        <div class="stats-content">
-            <div class="stats-grid-8-col">
-                <!-- Row 1 -->
-                <div class="stat-item">
-                    <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">🎓</div>
-                    <div class="stat-info">
-                        <h4 style="font-size: 1.5rem; margin: 0; color: var(--secondary-color);">300476</h4>
-                        <p style="font-size: 0.8rem; opacity: 0.9;">Students in Affiliated Colleges</p>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">🏫</div>
-                    <div class="stat-info">
-                        <h4 style="font-size: 1.5rem; margin: 0; color: var(--secondary-color);">3454</h4>
-                        <p style="font-size: 0.8rem; opacity: 0.9;">Students at University Campus</p>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">🏛️</div>
-                    <div class="stat-info">
-                        <h4 style="font-size: 1.5rem; margin: 0; color: var(--secondary-color);">589</h4>
-                        <p style="font-size: 0.8rem; opacity: 0.9;">Affiliated Colleges</p>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">📜</div>
-                    <div class="stat-info">
-                        <h4 style="font-size: 1.5rem; margin: 0; color: var(--secondary-color);">27</h4>
-                        <p style="font-size: 0.8rem; opacity: 0.9;">Government/Aided Colleges</p>
-                    </div>
-                </div>
-                <!-- Row 2 -->
-                <div class="stat-item">
-                    <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">💰</div>
-                    <div class="stat-info">
-                        <h4 style="font-size: 1.5rem; margin: 0; color: var(--secondary-color);">562</h4>
-                        <p style="font-size: 0.8rem; opacity: 0.9;">Self-finance Colleges</p>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">👨‍🏫</div>
-                    <div class="stat-info">
-                        <h4 style="font-size: 1.5rem; margin: 0; color: var(--secondary-color);">6</h4>
-                        <p style="font-size: 0.8rem; opacity: 0.9;">Faculties at Campus</p>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">📚</div>
-                    <div class="stat-info">
-                        <h4 style="font-size: 1.5rem; margin: 0; color: var(--secondary-color);">10</h4>
-                        <p style="font-size: 0.8rem; opacity: 0.9;">Faculties in Colleges</p>
-                    </div>
-                </div>
-                 <div class="stat-item">
-                    <div class="stat-icon" style="font-size: 2rem; margin-bottom: 10px;">🌟</div>
-                    <div class="stat-info">
-                        <h4 style="font-size: 1.5rem; margin: 0; color: var(--secondary-color);">A+</h4>
-                        <p style="font-size: 0.8rem; opacity: 0.9;">NAAC Accredited</p>
-                    </div>
-                </div>
+        <!-- Stats Editorial Section -->
+        <div class="stats-editorial-section">
+            <div class="stat-unit">
+                <h4 class="stat-number counter" data-target="300476">0</h4>
+                <p class="stat-label">Students in Affiliated Colleges</p>
+            </div>
+            <div class="stat-unit">
+                <h4 class="stat-number counter" data-target="3454">0</h4>
+                <p class="stat-label">Students at University Campus</p>
+            </div>
+            <div class="stat-unit">
+                <h4 class="stat-number counter" data-target="589">0</h4>
+                <p class="stat-label">Affiliated Colleges</p>
+            </div>
+            <div class="stat-unit">
+                <h4 class="stat-number counter" data-target="27">0</h4>
+                <p class="stat-label">Government/Aided Colleges</p>
+            </div>
+            <div class="stat-unit">
+                <h4 class="stat-number counter" data-target="562">0</h4>
+                <p class="stat-label">Self-finance Colleges</p>
+            </div>
+            <div class="stat-unit">
+                <h4 class="stat-number counter" data-target="6">0</h4>
+                <p class="stat-label">Faculties at Campus</p>
+            </div>
+            <div class="stat-unit">
+                <h4 class="stat-number counter" data-target="10">0</h4>
+                <p class="stat-label">Faculties in Colleges</p>
+            </div>
+             <div class="stat-unit">
+                <h4 class="stat-number">A+</h4>
+                <p class="stat-label">NAAC Accredited</p>
             </div>
         </div>
 

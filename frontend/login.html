@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal - PMMMCE</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/global.css">
+    <style>
+        body {
+            background: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-portal-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative Background Elements */
+        .bg-blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .bg-blob-1 {
+            top: -100px;
+            right: -100px;
+        }
+
+        .bg-blob-2 {
+            bottom: -100px;
+            left: -100px;
+        }
+
+        .portal-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .portal-header {
+            margin-bottom: 60px;
+        }
+
+        .portal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1e293b;
+            margin-bottom: 16px;
+        }
+
+        .portal-subtitle {
+            font-family: 'Inter', sans-serif;
+            color: #64748b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .login-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 10px;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .card-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .login-card:hover .card-icon-wrapper {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .card-action {
+            margin-top: auto;
+            font-weight: 600;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-action span {
+            transition: transform 0.3s ease;
+        }
+
+        .login-card:hover .card-action span {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .portal-title {
+                font-size: 2.2rem;
+            }
+
+            .login-portal-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="login-portal-section">
+        <div class="bg-blob bg-blob-1"></div>
+        <div class="bg-blob bg-blob-2"></div>
+
+        <div class="portal-container">
+            <header class="portal-header">
+                <h1 class="portal-title">Welcome to PMMMCE</h1>
+                <p class="portal-subtitle">Select your role to access the dedicated portal. Secure access for students,
+                    staff, and administration.</p>
+            </header>
+
+            <div class="login-cards-grid">
+                <!-- Admin Card -->
+                <a href="/admin-panel/login.html" class="login-card">
+                    <div class="card-icon-wrapper">
+                        🛡️
+                    </div>
+                    <h3 class="card-title">Administration</h3>
+                    <p class="card-desc">Access/Control Panel for college administrators and management staff.</p>
+                    <div class="card-action">
+                        Login as Admin <span>→</span>
+                    </div>
+                </a>
+
+                <!-- Student Card -->
+                <a href="#" class="login-card">
+                    <div class="card-icon-wrapper">
+                        🎓
+                    </div>
+                    <h3 class="card-title">Student Zone</h3>
+                    <p class="card-desc">B.Ed & D.El.Ed student portal for results, resources, and updates.</p>
+                    <div class="card-action">
+                        Student Login <span>→</span>
+                    </div>
+                </a>
+
+                <!-- Staff Card -->
+                <a href="#" class="login-card">
+                    <div class="card-icon-wrapper">
+                        👨‍🏫
+                    </div>
+                    <h3 class="card-title">Staff & Faculty</h3>
+                    <p class="card-desc">Dedicated portal for teaching staff and department heads.</p>
+                    <div class="card-action">
+                        Staff Login <span>→</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="./src/js/main.js"></script>
+    <script>
+        // Simple placeholder loader for headers/footers if main.js doesn't auto-handle standalone pages effectively
+        // Assuming main.js handles it, otherwise we might see empty headers.
+        // Given existing structure, Header() is likely injected.
+    </script>
+</body>
+
+</html>

@@ -49,7 +49,45 @@ export function initInteractions() {
         });
     });
 
-    // 2. Button Link Handling (Temporary for missing pages)
+    // 2. Stats Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+
+    if (counters.length > 0) {
+        const observerOptions = {
+            threshold: 0.5 // Trigger when 50% visible
+        };
+
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 20); // 20ms frame
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+
+                    updateCount();
+                    observer.unobserve(counter); // Only run once
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => {
+            statsObserver.observe(counter);
+        });
+    }
+
+    // 3. Button Link Handling (Temporary for missing pages)
     document.addEventListener('click', (e) => {
         if (e.target.tagName === 'A') {
             const href = e.target.getAttribute('href');
